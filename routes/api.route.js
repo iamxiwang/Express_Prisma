@@ -15,7 +15,17 @@ router.get('/jokes', async (req, res, next) => {
 });
 
 router.get('/jokes/:id', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    const {id} = req.params
+    const joke = await prisma.joke.findUnique({
+      where: {
+        id : Number(id)
+      }
+    })
+    res.json(joke)
+  } catch (error) {
+    next(error)
+  }
 });
 
 
@@ -31,10 +41,34 @@ router.post('/jokes', async (req, res, next) => {
 
 
 router.delete('/jokes/:id', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    const {id} = req.params
+    const deletedJoke = await prisma.joke.delete({
+      where: {
+        id : Number(id)
+
+      }
+    })
+    res.json(deletedJoke)
+  } catch (error) {
+    next(error)
+  }
 });
 router.patch('/jokes/:id', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    const {id} = req.params
+    const joke = await prisma.joke.update({
+      where:{
+        id : Number(id), 
+      },
+      data: req.body
+    })
+
+    res.json(joke)
+
+  } catch (error) {
+    next(error)
+  }
 });
 
 

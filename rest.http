@@ -1,5 +1,8 @@
 GET http://localhost:3000/api/jokes
 
+###
+GET http://localhost:3000/api/jokes/3
+
 
 ###
 POST http://localhost:3000/api/jokes
@@ -7,6 +10,20 @@ Content-Type: application/json
 
 {
     "title": "Hippo ",
+    "content": "Why don't you find hippopotamuses hiding in trees? They're really good at it.",
+    "authorId": 1
+}
+
+###
+DELETE http://localhost:3000/api/jokes/2
+
+###
+
+PATCH http://localhost:3000/api/jokes/3
+Content-Type: application/json
+
+{
+    "title": "Hippopotamus",
     "content": "Why don't you find hippopotamuses hiding in trees? They're really good at it.",
     "authorId": 1
 }
