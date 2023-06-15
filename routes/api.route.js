@@ -17,9 +17,19 @@ router.get('/jokes', async (req, res, next) => {
 router.get('/jokes/:id', async (req, res, next) => {
   res.send({ message: 'Ok api is working 🚀' });
 });
+
+
+
 router.post('/jokes', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+  try {
+    const joke = await prisma.joke.create({data: req.body})
+    res.json(joke)
+  } catch (error) {
+    next(error)
+  }
 });
+
+
 router.delete('/jokes/:id', async (req, res, next) => {
   res.send({ message: 'Ok api is working 🚀' });
 });
