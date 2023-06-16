@@ -23,7 +23,7 @@ PATCH http://localhost:3000/api/jokes/3
 Content-Type: application/json
 
 {
-    "title": "Hippopotamus",
+    "title": "Hippopotamusssss",
     "content": "Why don't you find hippopotamuses hiding in trees? They're really good at it.",
     "authorId": 1
 }
