@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView  className="flex-1 items-center justify-center bg-white">
       <StatusBar/>
       <Text>Open up n your app!</Text>
       <StatusBar style="auto" />

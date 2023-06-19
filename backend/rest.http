@@ -1,5 +1,6 @@
 GET http://localhost:3000/api/jokes
-
+###
+GET http://localhost:3000/api/users
 ###
 GET http://localhost:3000/api/jokes/3
 
@@ -24,6 +25,6 @@ Content-Type: application/json
 
 {
     "title": "Hippopotamusssss",
-    "content": "Why don't you find hippopotamuses hiding in trees? They're really good at it.",
+    "content": "Why don't hippos like fast food? Because they can't catch it!",
     "authorId": 1
 }
