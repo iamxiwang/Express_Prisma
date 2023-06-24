@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import JokeItem from './components/JokeItem';
-
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import tw from 'twrnc'
 export default function App() {
   return (
-    <SafeAreaView  className="flex-1 items-center justify-center bg-white">
-      <StatusBar/>
-      <Text>Open up your app!</Text>
-      <JokeItem />
-    </SafeAreaView>
+    <View className="flex-1 justify-center items-center bg-orange-300">
+      <TouchableOpacity className='p-6 bg-cyan-500 shadow-md shadow-gray-500 ' >
+        <Text className='text-white font-bold text-3xl'>JOKES</Text>
+      </TouchableOpacity>
+      <StatusBar style="auto" />
+    </View>
   );
 }
 
