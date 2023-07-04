@@ -35,6 +35,7 @@ router.post('/jokes', async (req, res, next) => {
     const joke = await prisma.joke.create({data: req.body})
     res.json(joke)
   } catch (error) {
+    console.error(error);
     next(error)
   }
 });

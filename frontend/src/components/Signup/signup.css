@@ -1,0 +1,239 @@
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.signup, .signup * {
+    box-sizing: border-box;
+    }
+.signup {
+    background: #ffffff;
+    width: 390px;
+    height: 844px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.form{
+    position: absolute;
+    left: 57.34px;
+    top: 435px;
+    width: 298.86px;
+    /* height: 180px; */
+    /* border: #64fcd9 2px solid; */
+}
+.illustration {
+    position: absolute;
+    inset: 0;
+}
+
+.blob {
+    position: absolute;
+    left: 35.67px;
+    top: 98.04px;
+    overflow: visible;
+}
+
+.list-is-empty-2 {
+    width: 302.05px;
+    height: 200.7px;
+    position: static;
+}
+
+.group {
+    position: absolute;
+        left: 43.49px;
+    top: 116.56px;
+        overflow: visible;
+}
+  
+.shape-2 {
+    position: absolute;
+    left: 68.75px;
+    top: 244.73px;
+    overflow: visible;
+}
+
+.sign-up {
+    color: #000000;
+    text-align: left;
+    font: 600 40px/20.8px 'Plus Jakarta Sans', sans-serif;
+    position: absolute;
+    left: 24.17px;
+    top: 385.03px;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email]  {
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border:none;
+    border-bottom: 2px solid #f3f2f2
+}
+
+button.submit{
+    width: 100%;
+    background: #64fcd9;
+    border:none;
+    border-radius: 10px;
+    width: 323.69px;
+    height: 41.1px;
+    margin-top: 122px;
+    margin-left: -25px;
+    font-size: medium;
+    font-weight:400;
+    font: 400 16px/20.8px 'Plus Jakarta Sans', sans-serif;
+}
+
+.by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy {
+    text-align: left;
+    font: 400 14px/20.8px 'Plus Jakarta Sans', sans-serif;
+    position: absolute;
+    left: 33px;
+    top: 654.93px;
+    width: 329.35px;
+}
+  
+.by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy-span {
+
+        color: #000000;
+
+        font: 400 14px/20.8px 'Plus Jakarta Sans', sans-serif;
+
+}
+
+.by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy-span2 {
+
+        color: #1769e3;
+
+        font: 400 14px/20.8px 'Plus Jakarta Sans', sans-serif;
+
+        
+        
+    }
+
+.by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy-span3 {
+
+        color: #000000;
+
+        font: 400 14px/20.8px 'Plus Jakarta Sans', sans-serif;
+
+        
+        
+}
+  
+.by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy-span4 {
+
+        color: #1769e3;
+
+        font: 400 14px/20.8px 'Plus Jakarta Sans', sans-serif;
+
+        
+        
+    }
+
+.full-name {
+    color: #bac0cb;
+    text-align: center;
+    font: 400 16px/20.8px 'Plus Jakarta Sans', sans-serif;
+    position: absolute;
+    left: 60.54px;
+    top: 498.3px;
+}
+
+.mobile {
+    color: #bac0cb;
+    text-align: left;
+    font: 400 16px/20.8px 'Plus Jakarta Sans', sans-serif;
+    position: absolute;
+    left: 58.54px;
+    top: 548.55px;
+}
+
+.password {
+    color: #bac0cb;
+    text-align: left;
+    font: 400 16px/20.8px 'Plus Jakarta Sans', sans-serif;
+    position: absolute;
+    left: 58.54px;
+    top: 598.8px;
+    }
+
+
+.iconly-bold-work {
+    position: absolute;
+    inset: 0;
+}
+
+.fa-regular.fa-envelope{
+    position: absolute;
+    left: 31.6px;
+    top: 457px;
+    overflow: visible;
+    color: #bac0cb;
+    font-weight: 800;
+}
+
+.fa-regular.fa-user{
+    position: absolute;
+    left: 31.6px;
+    top: 501px;
+    overflow: visible;
+    color: #bac0cb; 
+    font-weight: 800;
+}
+
+.fa-regular.fa-key{
+    position: absolute;
+    left: 31.6px;
+    top: 548px;
+    overflow: visible;
+    color: #bac0cb; 
+    font-weight: 800;
+}
+.iconly-bold-profile {
+position: absolute;
+inset: 0;
+}
+  
+.profile {
+position: absolute;
+left: 33px;
+top: 502.6px;
+overflow: visible;
+}
+
+  
+.group2 {
+width: 6px;
+height: 6.02px;
+position: static;
+}
+
+
+.iconly-bold-password {
+    position: absolute;
+    inset: 0;
+}
+
+.iconly-bold-confirm{
+    position: absolute;
+    inset: 0;
+}
+.fa-solid.fa-check-double {
+    position: absolute;
+    left: 31.6px;
+    top: 591.54px;
+    overflow: visible;
+    color: #bac0cb; 
+
+}
+
+
+
+
+
+
+
+
+
