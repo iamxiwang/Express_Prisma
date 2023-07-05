@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './signup.css'
 type Props = {}
 
@@ -65,8 +66,12 @@ const Signup = (props: Props) => {
             <div className='iconly-bold-confirm'>
             <i className="fa-solid fa-check-double"></i>
             </div>
+            <div className='joined_before'>Joined before?
+            <NavLink to='/login'>  login</NavLink>
+            </div>
         </div>
     );
 }
 
 export default Signup
+

@@ -233,7 +233,11 @@ position: static;
 
 
 
-
+.joined_before {
+    position: absolute;
+    left: 110.56px;
+    top:790px
+}
 
 
 

@@ -13,7 +13,7 @@ datasource db {
 model Joke {
   id Int @id @default(autoincrement())
   title String 
-  content String @unique  
+  content String @unique 
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
   author User?  @relation(fields: [authorId], references: [id])
