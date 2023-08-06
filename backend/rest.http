@@ -39,3 +39,15 @@ Content-Type: application/json
     "email": "demo@user.io",
     "password": "password"
 }
+
+
+###
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+    "firstName": "MonsterGame",
+    "lastName":"Litto",
+    "email": "monster@gmail.com",
+    "password": "password"
+}
