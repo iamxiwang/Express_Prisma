@@ -28,3 +28,14 @@ Content-Type: application/json
     "content": "Why don't hippos like fast food? Because they can't catch it!",
     "authorId": 1
 }
+
+###
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+    "firstName": "Hippo",
+    "lastName":"Litto",
+    "email": "demo@user.io",
+    "password": "password"
+}
