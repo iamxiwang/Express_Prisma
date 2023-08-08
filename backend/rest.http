@@ -51,3 +51,12 @@ Content-Type: application/json
     "email": "monster@gmail.com",
     "password": "password"
 }
+
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "monster@gmail.com",
+    "password": "passwrd"
+}

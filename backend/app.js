@@ -3,6 +3,10 @@ const createError = require('http-errors');
 const morgan = require('morgan');
 require('dotenv').config();
 
+require('./config/passport'); // <-- ADD THIS LINE
+const passport = require('passport'); // <-- ADD THIS LINE
+
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
