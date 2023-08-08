@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const {PrismaClient} = require('@prisma/client')
-const prisma = new PrismaClient()
 
+const prisma = new PrismaClient()
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+
+const { loginUser } = require('../config/passport');
 
 router.get('/', async (req, res, next) => {
     try{
@@ -92,7 +94,7 @@ router.post('/register', async (req, res, next) => {
                     });
 
                     // Return the newly created user
-                    res.json({ user: newUser });
+                    return res.json(await loginUser(newUser));
                 } catch (error) {
                     next(error);
                 }
@@ -110,7 +112,7 @@ router.post('/login', async (req, res, next) => {
             err.errors = { email: "Invalid credentials" };
             return next(err);
         }
-        return res.json({ user });
+        return res.json(await loginUser(user));
     })(req, res, next);
 });
 

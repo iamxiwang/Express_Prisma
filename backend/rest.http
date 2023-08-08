@@ -2,8 +2,10 @@ GET http://localhost:5000/api/jokes
 ###
 GET http://localhost:5000/api/users
 ###
-GET http://localhost:5000/api/jokes/3
+GET http://localhost:5000/api/jokes/6
 
+###
+DELETE http://localhost:5000/api/jokes/6
 
 ###
 POST http://localhost:5000/api/jokes
@@ -46,9 +48,9 @@ POST http://localhost:5000/api/users/register
 Content-Type: application/json
 
 {
-    "firstName": "MonsterGame",
-    "lastName":"Litto",
-    "email": "monster@gmail.com",
+    "firstName": "Bafitri",
+    "lastName":"Bhelton",
+    "email": "BafitriS@gmail.com",
     "password": "password"
 }
 
@@ -58,5 +60,5 @@ Content-Type: application/json
 
 {
     "email": "monster@gmail.com",
-    "password": "passwrd"
+    "password": "password"
 }

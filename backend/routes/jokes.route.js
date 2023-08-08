@@ -32,7 +32,9 @@ router.get('/jokes/:id', async (req, res, next) => {
 
 router.post('/jokes', async (req, res, next) => {
   try {
-    const joke = await prisma.joke.create({data: req.body})
+    const joke = await prisma.joke.create({
+      data: req.body
+    })
     res.json(joke)
   } catch (error) {
     console.error(error);
@@ -50,11 +52,15 @@ router.delete('/jokes/:id', async (req, res, next) => {
 
       }
     })
-    res.json(deletedJoke)
+    if (!deletedJoke) {
+      return res.status(404).json({ message: 'Joke not found' });
+    }
+    res.json({ message: 'Joke deleted successfully' })
   } catch (error) {
     next(error)
   }
 });
+
 router.patch('/jokes/:id', async (req, res, next) => {
   try {
     const {id} = req.params

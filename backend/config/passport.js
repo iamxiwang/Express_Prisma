@@ -1,6 +1,8 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const { secretOrKey } = require('./keys');
 const {PrismaClient} = require('@prisma/client')
 const prisma = new PrismaClient()
 const User = prisma.user
@@ -33,3 +35,19 @@ passport.use(
             return done(error)
         };
 }));
+exports.loginUser = async function(user) {
+    const userInfo = {
+        id: user.id,
+        firstName:user.firstName,
+        email: user.email
+    };
+    const token = await jwt.sign(
+      userInfo, // payload
+      secretOrKey, // sign with secret key
+      { expiresIn: 3600 } // tell the key to expire in one hour
+    );
+    return {
+        user: userInfo,
+        token
+    };
+};
