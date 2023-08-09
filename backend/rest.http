@@ -34,24 +34,13 @@ Content-Type: application/json
 ###
 POST http://localhost:5000/api/users/register
 Content-Type: application/json
+CSRF-TOKEN: xsVGCwcP-_RrvResQ2-hwp6sOGg5jW9S5lEc
 
 {
-    "firstName": "Hippo",
-    "lastName":"Litto",
-    "email": "demo@user.io",
-    "password": "password"
-}
-
-
-###
-POST http://localhost:5000/api/users/register
-Content-Type: application/json
-
-{
-    "firstName": "Bafitri",
-    "lastName":"Bhelton",
-    "email": "BafitriS@gmail.com",
-    "password": "password"
+    "firstName": "Cafitri",
+    "lastName":"Chelton",
+    "email": "CafitriS@gmail.com",
+    "password": "Cassword"
 }
 
 ###
@@ -62,3 +51,6 @@ Content-Type: application/json
     "email": "monster@gmail.com",
     "password": "password"
 }
+
+###
+GET http://localhost:5000/api/csrf/restore
