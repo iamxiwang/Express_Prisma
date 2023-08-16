@@ -1,4 +1,4 @@
-GET http://localhost:5000/api/jokes
+GET http://localhost:5000/api/gghgh
 ###
 GET http://localhost:5000/api/users
 ###
@@ -34,23 +34,38 @@ Content-Type: application/json
 ###
 POST http://localhost:5000/api/users/register
 Content-Type: application/json
-CSRF-TOKEN: xsVGCwcP-_RrvResQ2-hwp6sOGg5jW9S5lEc
+CSRF-TOKEN: MODpEhIB-_5XU2WpU-OuoMEaTxUGeUIJb884
 
 {
-    "firstName": "Cafitri",
-    "lastName":"Chelton",
-    "email": "CafitriS@gmail.com",
-    "password": "Cassword"
+    "firstName": "Dafitri",
+    "lastName":"Dhelton",
+    "email": "DafitriS@gmail.com",
+    "password": "Dassword"
 }
 
 ###
 POST http://localhost:5000/api/users/login
 Content-Type: application/json
+CSRF-TOKEN: MODpEhIB-_5XU2WpU-OuoMEaTxUGeUIJb884
+
 
 {
-    "email": "monster@gmail.com",
-    "password": "password"
+    "email": "DafitriS@gmail.com",
+    "password": "Dassword"
 }
 
 ###
 GET http://localhost:5000/api/csrf/restore
+
+# "user": {
+#     "id": 7,
+#     "firstName": "Dafitri",
+#     "email": "DafitriS@gmail.com"
+#   },
+#   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZmlyc3ROYW1lIjoiRGFmaXRyaSIsImVtYWlsIjoiRGFmaXRyaVNAZ21haWwuY29tIiwiaWF0IjoxNjkxOTY5NTczLCJleHAiOjE2OTE5NzMxNzN9.2Ynt6ubzXQIVtJdVF9yKSNqRXxE0BveqPjeK0SQVS_U"
+
+###
+GET http://localhost:5000/api/users/current
+Content-Type: application/json
+CSRF-Token: q1chT9fb-WsG72pimilpKW-vtku_MLvZc4Ps
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZmlyc3ROYW1lIjoiRGFmaXRyaSIsImVtYWlsIjoiRGFmaXRyaVNAZ21haWwuY29tIiwiaWF0IjoxNjkxOTcyMzA5LCJleHAiOjE2OTE5NzU5MDl9.eofSeXb1jHojT9kPrtlui655w6nhYkzyPb9E7M4UBC8

@@ -1,11 +1,12 @@
+const passport = require('passport');
 const router = require('express').Router();
 const {PrismaClient} = require('@prisma/client')
 
 const prisma = new PrismaClient()
 const bcrypt = require('bcryptjs');
-const passport = require('passport');
 
-const { loginUser } = require('../config/passport');
+const { loginUser,restoreUser } = require('../config/passport');
+const { isProduction } = require('../config/keys');
 
 router.get('/', async (req, res, next) => {
     try{
@@ -114,6 +115,23 @@ router.post('/login', async (req, res, next) => {
         }
         return res.json(await loginUser(user));
     })(req, res, next);
+});
+
+
+router.get('/current', restoreUser, (req, res) => {
+        if (!isProduction) {
+        // In development, allow React server to gain access to the CSRF token
+        // whenever the current user information is first loaded into the
+        // React application
+        const csrfToken = req.csrfToken();
+        res.cookie("CSRF-TOKEN", csrfToken);
+        }
+        if (!req.user) return res.json(null);
+        res.json({
+        _id: req.user._id,
+        username: req.user.username,
+        email: req.user.email
+        });
 });
 
 module.exports = router;
