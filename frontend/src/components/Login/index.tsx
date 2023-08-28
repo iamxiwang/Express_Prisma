@@ -4,6 +4,16 @@ import './login.css'
 type Props = {}
 
 const index = (props: Props) => {
+
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+
+    }
+
+
+
+
     return (
         <div className="login">
             <div className='illustration-2'>
@@ -320,8 +330,8 @@ const index = (props: Props) => {
                 </svg>
             </div>
             <div className="title">Login</div>
-            <form action=""
-            className='login-form'>
+            <form className='login-form'
+            onSubmit={handleSubmit}>
                 <label htmlFor="">
                     <input type="email"
                     placeholder='Email'
