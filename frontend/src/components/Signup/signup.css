@@ -3,29 +3,28 @@
     justify-content: center;
 }
 
+
 .signup, .signup * {
     box-sizing: border-box;
     }
 .signup {
     background: #ffffff;
     width: 390px;
-    height: 844px;
+    height: 100vh;
     position: relative;
-    overflow: hidden;
-    /* border: red 2px solid; */
+    overflow: auto;
     
 }
 .form{
     position: absolute;
     left: 57.34px;
-    top: 435px;
+    top: 370px;
     width: 298.86px;
     /* height: 180px; */
     /* border: #64fcd9 2px solid; */
 }
 .illustration {
     position: absolute;
-    inset: 0;
 }
 
 .blob {
@@ -61,7 +60,7 @@
     font: 600 40px/20.8px 'Plus Jakarta Sans', sans-serif;
     position: absolute;
     left: 24.17px;
-    top: 385.03px;
+    top: 320.03px;
 }
 
 input[type=text], input[type=password], input[type=number], input[type=email]  {
@@ -79,7 +78,7 @@ button.submit{
     border-radius: 10px;
     width: 323.69px;
     height: 41.1px;
-    margin-top: 122px;
+    margin-top: 82px;
     margin-left: -25px;
     font-size: medium;
     font-weight:400;
@@ -91,8 +90,8 @@ button.submit{
     font: 400 14px/20.8px 'Plus Jakarta Sans', sans-serif;
     position: absolute;
     left: 33px;
-    top: 654.93px;
-    width: 329.35px;
+    top: 565px;
+    width: 340px;
 }
   
 .by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy-span {
@@ -161,15 +160,14 @@ button.submit{
     }
 
 
-.iconly-bold-work {
-    position: absolute;
-    inset: 0;
-}
+/* .iconly-bold-work {
+    position: absolute;   
+} */
 
 .fa-regular.fa-envelope{
     position: absolute;
     left: 31.6px;
-    top: 457px;
+    top: 390px;
     overflow: visible;
     color: #bac0cb;
     font-weight: 800;
@@ -178,7 +176,7 @@ button.submit{
 .fa-regular.fa-user{
     position: absolute;
     left: 31.6px;
-    top: 501px;
+    top: 435px;
     overflow: visible;
     color: #bac0cb; 
     font-weight: 800;
@@ -187,15 +185,15 @@ button.submit{
 .fa-regular.fa-key{
     position: absolute;
     left: 31.6px;
-    top: 548px;
+    top: 482px;
     overflow: visible;
     color: #bac0cb; 
     font-weight: 800;
 }
-.iconly-bold-profile {
-position: absolute;
-inset: 0;
-}
+/* .iconly-bold-profile {
+    position: absolute;
+
+} */
   
 .profile {
 position: absolute;
@@ -212,19 +210,17 @@ position: static;
 }
 
 
-.iconly-bold-password {
+#google {
     position: absolute;
-    inset: 0;
+    left:35px;
+    top:700px
+
 }
 
-.iconly-bold-confirm{
-    position: absolute;
-    inset: 0;
-}
 .fa-solid.fa-check-double {
     position: absolute;
     left: 31.6px;
-    top: 591.54px;
+    top: 525.54px;
     overflow: visible;
     color: #bac0cb; 
 
@@ -237,8 +233,8 @@ position: static;
 .joined_before {
     position: absolute;
     left: 110.56px;
-    top:790px
+    top:770px
 }
 
 
-
+/* customize the google signin button */

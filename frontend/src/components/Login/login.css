@@ -1,3 +1,17 @@
+/* want to do blur  */
+/* .welcome .blur {
+    position: absolute;
+    width: 60vw;
+    height: 150vh;
+    top: -20vh;
+    left: -10vw;
+    display: block;
+    background: var(--color-transparent-black);
+    backdrop-filter: blur(calc(var(--base-unit)*2));
+    -webkit-backdrop-filter: blur(calc(var(--base-unit)*2));
+    z-index: 2;
+    transform: rotate(-15deg);
+} */
 .login,
 .login * {
     box-sizing: border-box;
@@ -8,8 +22,6 @@
     width: 390px;
     height: 844px;
     position: relative;
-    overflow: hidden;
-    /* border: red 2px solid; */
     height: 100vh;
     
 }
@@ -22,7 +34,7 @@
     text-align: left;
     font: 600 40px/20.8px 'Plus Jakarta Sans', sans-serif;
     position: absolute;
-    left: 24.17px;
+    left: 32.51px;
     top: 385.03px;
 }
 
@@ -33,29 +45,29 @@
     overflow: visible;
 }
 .whites {
-  position: absolute;
-  left: 222.84px;
-  top: 195.76px;
-  overflow: visible;
+    position: absolute;
+    left: 222.84px;
+    top: 195.76px;
+    overflow: visible;
 }
 .whites-2 {
-  position: absolute;
-  left: 105.21px;
-  top: 125.59px;
-  overflow: visible;
+    position: absolute;
+    left: 105.21px;
+    top: 125.59px;
+    overflow: visible;
 }
 .shadow {
-  position: absolute;
-  left: 146.92px;
-  top: 129.11px;
-  overflow: visible;
+    position: absolute;
+    left: 146.92px;
+    top: 129.11px;
+    overflow: visible;
 }
 .shadow-2 {
-  position: absolute;
-  left: 178.17px;
-  top: 171.7px;
-  overflow: visible;
-}
+    position: absolute;
+    left: 178.17px;
+    top: 171.7px;
+    overflow: visible;
+    }
 .group {
     position: absolute;
     left: 68.13px;
@@ -75,7 +87,8 @@ input[type=text], input[type=password], input[type=number], input[type=email]  {
     height: 35px;
     margin-top: 10px;
     border:none;
-    border-bottom: 2px solid #f3f2f2
+    border-bottom: 2px solid #f3f2f2;
+    
 }
 .forgotpassword{
     position: absolute;
@@ -86,17 +99,16 @@ input[type=text], input[type=password], input[type=number], input[type=email]  {
 .or{
     position: absolute;
     top:655px;
-    left:183.86px;
+    left:165.86px;
 }
 button.login-submit{
     width: 100%;
     background: #64fcd9;
     border:none;
     border-radius: 10px;
-    width: 323.69px;
     height: 41.1px;
     margin-top: 42px;
-   
+
     font-size: medium;
     font-weight:400;
     font: 400 16px/20.8px 'Plus Jakarta Sans', sans-serif;
@@ -106,7 +118,8 @@ button.login-submit{
 .loginwithgoogle{
     background: #f3f2f2;
     border-radius: 10px;
-    width: 323.69px;
+    border:none;
+    width: 300px;
     height: 41.1px;
     text-align: center;
     position: absolute;
@@ -128,7 +141,8 @@ button.login-submit{
 .loginwithfacebook{
     background: #f3f2f2;
     border-radius: 10px;
-    width: 323.69px;
+    border:none;
+    width: 300px;
     height: 41.1px;
     text-align: center;
     position: absolute;
