@@ -75,9 +75,9 @@ button.submit{
     width: 100%;
     background: #64fcd9;
     border:none;
-    border-radius: 10px;
+    border-radius: 100px;
     width: 323.69px;
-    height: 41.1px;
+    height: 40px;
     margin-top: 82px;
     margin-left: -25px;
     font-size: medium;
@@ -212,8 +212,10 @@ position: static;
 
 #google {
     position: absolute;
-    left:35px;
-    top:700px
+    left:30px;
+    top:700px;
+    width:82%;
+   
 
 }
 

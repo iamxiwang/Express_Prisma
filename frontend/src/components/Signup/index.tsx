@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 import './signup.css'
+
+
+
 type Props = {}
 
 type responseProp = {
@@ -40,8 +43,6 @@ const Signup = (props: Props) => {
         console.log('Encoded JWT ID token:' + response.credential)
     }
 
-
-
     useEffect(() => {
        
         window.google.accounts.id.initialize({
@@ -51,7 +52,11 @@ const Signup = (props: Props) => {
 
         window.google.accounts.id.renderButton(
             document.getElementById("google"),
-            { theme: "outline", size:'large'}
+            {   theme: "filled_blue", 
+                shape: 'circle',
+                width:'320px',
+                size:'large'
+            }
         )
     }, []);
 
@@ -113,12 +118,7 @@ const Signup = (props: Props) => {
                 </label>
                 <button className='submit' >Continue</button>
             </form>
-            <div id="google" 
-                style={{
-                    borderRadius: '10px', // Note: CSS property names are camelCased in JavaScript
-                    background:
-                      'linear-gradient(90deg, #E2FF24 0%, #24FE41 100%)'
-                  }}>
+            <div id="google">
 
             </div>
 
