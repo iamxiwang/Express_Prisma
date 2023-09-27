@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 import './signup.css'
+import { GoogleOAuthProvider,GoogleLogin } from '@react-oauth/google';
 
 
 
@@ -10,21 +11,11 @@ type responseProp = {
     credential:string
 }
 
-declare global {
-    interface Window {
-      google: {
-        accounts: {
-          id: {
-            initialize: (options: { client_id: string | undefined; callback: Function }) => void;
-            renderButton:Function
-          };
-        };
-      };
-    }
-  }
+
 
 const Signup = (props: Props) => {
-
+    const clientid:string = process.env.REACT_APP_client_id!
+    console.log(process.env.REACT_APP_client_id)
     const [form, setForm] = useState({
         email: "",
         username: "",
@@ -39,25 +30,9 @@ const Signup = (props: Props) => {
         
         }))
     }
-    const handleCallbackResponse = (response: responseProp) =>{
-        console.log('Encoded JWT ID token:' + response.credential)
-    }
-
+    
     useEffect(() => {
        
-        window.google.accounts.id.initialize({
-            client_id: process.env.REACT_APP_client_id,
-            callback: handleCallbackResponse,
-          });
-
-        window.google.accounts.id.renderButton(
-            document.getElementById("google"),
-            {   theme: "filled_blue", 
-                shape: 'circle',
-                width:'320px',
-                size:'large'
-            }
-        )
     }, []);
 
     
@@ -119,7 +94,21 @@ const Signup = (props: Props) => {
                 <button className='submit' >Continue</button>
             </form>
             <div id="google">
-
+                <GoogleOAuthProvider clientId={clientid}>
+                        <GoogleLogin
+                            onSuccess={credentialResponse => {
+                                console.log(credentialResponse);
+                            }}
+                            // type="icon"
+                            theme="filled_blue"
+                            width = "320px"
+                            shape="pill"
+                            onError={() => {
+                                console.log('Login Failed');
+                            }}
+                            useOneTap
+                            />
+                    </GoogleOAuthProvider>
             </div>
 
             <div className="by-signing-up-you-re-agree-to-our-term-conditions-and-privacy-policy" >

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import './login.css'
+import { GoogleOAuthProvider,GoogleLogin } from '@react-oauth/google';
 
 type Props = {}
 //
 const Index = (props: Props) => {
-
-
+    const clientid:string = process.env.REACT_APP_client_id!
+    console.log(process.env.REACT_APP_client_id)
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -18,17 +19,7 @@ const Index = (props: Props) => {
             console.log('MyComponent onUnmount');
         };
     }, []);
-    // useEffect(() => {
-    //     const controller = new AbortController()
-    //     fetch(`http://dummyjson.com/posts/${id}`, {
-    //         signal: controller.signal
-    //     })
-    //         .then((res) => res.json())
-    //         .then((data) => setText(data.body));
-
-    //     return () => controller.abort()
-    // })
-
+    
 
     return (
         <div className="login">
@@ -362,34 +353,24 @@ const Index = (props: Props) => {
                 <button className='login-submit' >Continue</button>
             </form>
             <div className='or'>OR</div>
-            <button className='loginwithgoogle'>Login With Google
-                <svg
-                        className="icon-google"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        >
-                        <path
-                            d="M21.6162 9.07459H20.7664V9.03081H11.2714V13.2508H17.2337C16.3639 15.7074 14.0266 17.4708 11.2714 17.4708C7.77568 17.4708 4.94143 14.6365 4.94143 11.1408C4.94143 7.64507 7.77568 4.81081 11.2714 4.81081C12.885 4.81081 14.3531 5.41955 15.4708 6.41389L18.4549 3.42982C16.5707 1.67378 14.0503 0.59082 11.2714 0.59082C5.44519 0.59082 0.721436 5.31458 0.721436 11.1408C0.721436 16.967 5.44519 21.6908 11.2714 21.6908C17.0977 21.6908 21.8214 16.967 21.8214 11.1408C21.8214 10.4334 21.7486 9.74293 21.6162 9.07459Z"
-                            fill="#FFC107"
+            <div className='loginwithgoogle'>
+                <GoogleOAuthProvider clientId={clientid}>
+                    <GoogleLogin
+                        onSuccess={credentialResponse => {
+                            console.log(credentialResponse);
+                        }}
+                        // type="icon"
+                        theme="filled_blue"
+                        width = "320px"
+                        shape="pill"
+                        onError={() => {
+                            console.log('Login Failed');
+                        }}
+                        useOneTap
                         />
-                        <path
-                            d="M1.93787 6.23031L5.40406 8.77233C6.34196 6.45028 8.61337 4.81081 11.2714 4.81081C12.8851 4.81081 14.3531 5.41955 15.4709 6.41388L18.4549 3.42982C16.5707 1.67378 14.0503 0.59082 11.2714 0.59082C7.21919 0.59082 3.70499 2.87858 1.93787 6.23031Z"
-                            fill="#FF3D00"
-                        />
-                        <path
-                            d="M11.2714 21.6908C13.9965 21.6908 16.4725 20.6479 18.3446 18.952L15.0794 16.189C14.0202 16.9913 12.7036 17.4708 11.2714 17.4708C8.52735 17.4708 6.19738 15.7211 5.31962 13.2793L1.87927 15.9299C3.6253 19.3466 7.17115 21.6908 11.2714 21.6908Z"
-                            fill="#4CAF50"
-                        />
-                        <path
-                            d="M21.6162 8.81612H20.7664V8.77234H11.2714V12.9923H17.2337C16.816 14.1723 16.0569 15.1899 15.0779 15.931C15.0784 15.9305 15.0789 15.9305 15.0794 15.93L18.3447 18.693C18.1136 18.903 21.8214 16.1573 21.8214 10.8823C21.8214 10.175 21.7486 9.48446 21.6162 8.81612Z"
-                            fill="#1976D2"
-                        />
-                </svg>
-            </button>
-            
+                </GoogleOAuthProvider>
+            </div>
+                        
             <div className='loginwithfacebook'>Login With Facebook
             <svg
                 className="icon-facebook"
